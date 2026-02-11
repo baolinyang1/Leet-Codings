@@ -38,11 +38,13 @@ def is_prime(n: int) -> bool:
     if n <= 1: return False
     if n <= 3: return True
     if n % 2 == 0 or n % 3 == 0: return False
+    
     i = 5
     while i * i <= n:
+        # Check 5 (6k-1) and 7 (6k+1)
         if n % i == 0 or n % (i + 2) == 0:
             return False
-        i += 6
+        i += 6 # Jump to the next potential pair (11 and 13)
     return True
 
 def count_primes_from_digits(s: str) -> int:
