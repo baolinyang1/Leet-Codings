@@ -10,4 +10,4 @@ other = total - max(A, B, C)
 
 # Maximum cookies that can be eaten without two identical cookies in a row:
 # either all cookies, or limited by how many separators exist
-print(min(total, 2 * other + 1))
+print(min(total, 2 * other + N))
