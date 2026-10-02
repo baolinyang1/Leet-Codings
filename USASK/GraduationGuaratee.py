@@ -17,7 +17,7 @@ def main():
         new_dp = [0.0] * (len(dp) + 2)
         for i in range(len(dp)):
             val = dp[i]
-            if val > 0:
+            if val > 0: # just optimization here, p is always >= 0.0.
                 # score - 1
                 new_dp[i] += val * q
                 # score + 1
