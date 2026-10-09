@@ -6,7 +6,7 @@ def reverse_bits(x: int, bits: int) -> int:
     """
     r = 0
     for _ in range(bits):
-        r = (r << 1) | (x & 1)   # take lowest bit of x and append to r
+        r = (r << 1) | (x & 1)   # take rightmost bit of x and append to r, notice | here is to append!
         x >>= 1                  # shift x right to process next bit
     return r
 
